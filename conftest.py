@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+from data import TestUrls
 
 @pytest.fixture()
 def driver():
@@ -8,6 +9,6 @@ def driver():
     firefox_options.add_argument("--width=1920")
     firefox_options.add_argument("--height=1080")
     driver = webdriver.Firefox(options=firefox_options)
-    driver.get('https://qa-scooter.praktikum-services.ru/')
+    driver.get(TestUrls.test_url_main_page[0])
     yield driver
     driver.quit()

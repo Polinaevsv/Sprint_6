@@ -1,7 +1,6 @@
 import allure
 import pytest
 from locators.main_page_locators import MainPageLocators
-from locators.order_page_locators import OrderPageLocators
 from pages.order_page import OrderPage
 from pages.main_page import MainPageSamokat
 from data import TestData
@@ -19,7 +18,7 @@ class TestOrderPageCreateOrder:
     def test_create_order(self, driver, locator_button_order, order_data):
         main_page = MainPageSamokat(driver)
         order_page = OrderPage(driver)
-        main_page.click_to_element(MainPageLocators.BUTTON_COOKIE)
+        main_page.click_to_cookie()
         main_page.click_to_element(locator_button_order)
         order_page.set_order(order_data)
-        assert order_page.check_displaying_of_element(OrderPageLocators.ORDER_CHECK_STATUS_OF_ORDER)
+        assert order_page.check_displaying_of_button_view_status()

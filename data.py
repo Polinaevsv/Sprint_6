@@ -16,3 +16,6 @@ class TestData:
 
    test_data_user2 = ['Петр', 'Петров', 'Кутузовский проспект, 15', '+79997776655', '03.01.2025',
                       'Жду самокат']
+
+class TestUrls:
+    test_url_main_page = ['https://qa-scooter.praktikum-services.ru/']
