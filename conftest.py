@@ -9,6 +9,6 @@ def driver():
     firefox_options.add_argument("--width=1920")
     firefox_options.add_argument("--height=1080")
     driver = webdriver.Firefox(options=firefox_options)
-    driver.get(TestUrls.test_url_main_page[0])
+    driver.get(TestUrls.test_url_main_page)
     yield driver
     driver.quit()

@@ -1,6 +1,7 @@
 import allure
 from pages.main_page import MainPageSamokat
 from pages.order_page import OrderPage
+from pages.dzen_page import DzenPage
 
 class TestRedirect:
     @allure.title('Проверка редиректов')
@@ -19,6 +20,7 @@ class TestRedirect:
         'Проверка открытия в новом окне страницы Дзена при клике по лого "Яндекса')
     def test_redirect_on_main_page_dzen_by_clicking_on_logo_yandex(self, driver):
         main_page = MainPageSamokat(driver)
+        dzen_page = DzenPage(driver)
         main_page.click_to_logo_yandex_in_header()
         main_page.switch_to_next_tab()
-        assert main_page.find_header_dzen()
+        assert dzen_page.find_header_dzen()

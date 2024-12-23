@@ -18,3 +18,7 @@ class OrderPageLocators:
     ORDER_BUTTON_ORDER = [By.XPATH, "//button[text()='Заказать' and position()=2]"]  #кнопка "Заказать" для оформления заказа, расположенная под формой "Про аренду"
     ORDER_BUTTON_YES = [By.XPATH, "//button[text()='Да']"]  #кнопка "Да" во всплывающем окне "Хотите оформить заказ?"
     ORDER_CHECK_STATUS_OF_ORDER = [By.XPATH, ".//*[text()='Посмотреть статус']"] # кнопка "Посмотреть статус" во всплывающем окне "Заказ оформлен"
+
+    LOGO_SCOOTER_IN_HEADER = By.XPATH, "//img[@alt='Scooter']"  # локатор лого "Самоката" в хэдере
+
+    BUTTON_COOKIE = By.XPATH, "(//button[text()='да все привыкли'])"  # локатор для кнопки принятия кук

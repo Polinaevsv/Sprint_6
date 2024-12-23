@@ -18,4 +18,4 @@ class TestData:
                       'Жду самокат']
 
 class TestUrls:
-    test_url_main_page = ['https://qa-scooter.praktikum-services.ru/']
+    test_url_main_page = 'https://qa-scooter.praktikum-services.ru/'
